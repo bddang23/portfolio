@@ -110,23 +110,23 @@ public class PizzaCompany_Dang extends Application {
     }
 
     public void BuildForm() {
-        conigureSize();
+        configureSize();
         vbForm.getChildren().add(vbSizeRoot);
         
-        conigureCrust();
+        configureCrust();
         vbForm.getChildren().add(vbSizeRoot);
         
-        conigureSauce();
-        vbForm.getChildren().add(vbSizeRoot);
+        configureSauce();
+        vbForm.getChildren().add(hbSauce);
         
-        conigureCheese();
-        vbForm.getChildren().add(vbSizeRoot);
+        configureCheese();
+        vbForm.getChildren().add(hbCheese);
         
-        conigureTopping();
-        vbForm.getChildren().add(vbSizeRoot);
+        configureTopping();
+        vbForm.getChildren().add(vbToppingRoot);
     }
 
-    public void conigureSize() {
+    public void configureSize() {
         vbSizeRoot = new VBox();
         vbSizeRoot.setAlignment(Pos.CENTER);
         vbSizeRoot.setSpacing(15);
@@ -140,6 +140,7 @@ public class PizzaCompany_Dang extends Application {
 
         radSmall = new RadioButton("Small");
         radMedium = new RadioButton("Medium");
+        radMedium.setSelected(true);
         radLarge = new RadioButton("Large");
 
         tglSize = new ToggleGroup();
@@ -149,4 +150,40 @@ public class PizzaCompany_Dang extends Application {
         vbSizeRoot.getChildren().addAll(lblSize,hbSize);
     }
     
+    public void configureCrust(){
+        vbCrustRoot = new VBox();
+        hbCrust = new HBox();
+        lblCrust=new Label("Choose Your Crust");
+        
+        radChicago =  new RadioButton("Chicago Style Deep Dish");
+        radNewYork = new RadioButton("New York Thin Crust");
+        
+        tglCrust = new ToggleGroup();
+        tglCrust.getToggles().addAll(radChicago,radNewYork);
+        
+        hbCrust.getChildren().addAll(radChicago,radNewYork);
+        vbCrustRoot.getChildren().addAll(lblCrust,hbCrust);
+    }
+    
+    public void configureSauce(){
+        hbSauce = new HBox();
+        lblSauce = new Label("Choose Your Sauce");
+        
+        tgbMarinara = new ToggleButton("Marinara");
+        tgbBBQ = new ToggleButton("BBQ");
+        tgbAlfredo= new ToggleButton("Alfredo");
+        tgbChipotle= new ToggleButton("Chipotle");
+        
+        hbSauce.getChildren().addAll(lblSauce,tgbMarinara,tgbBBQ,tgbAlfredo,tgbChipotle);
+    }
+    
+    public void configureCheese(){
+        hbCheese= new HBox();
+        lblCheese =  new Label("Choose Cheese Level");
+        
+        String cheese[] = {"None","Normal","Extra");
+         cmbCheese = new ComboBox(cheese);
+         
+         hbCheese.getChildren().addAll(lblCheese,cmbCheese);
+    }
 }
