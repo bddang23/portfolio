@@ -112,6 +112,18 @@ public class PizzaCompany_Dang extends Application {
     public void BuildForm() {
         conigureSize();
         vbForm.getChildren().add(vbSizeRoot);
+        
+        conigureCrust();
+        vbForm.getChildren().add(vbSizeRoot);
+        
+        conigureSauce();
+        vbForm.getChildren().add(vbSizeRoot);
+        
+        conigureCheese();
+        vbForm.getChildren().add(vbSizeRoot);
+        
+        conigureTopping();
+        vbForm.getChildren().add(vbSizeRoot);
     }
 
     public void conigureSize() {
@@ -136,4 +148,5 @@ public class PizzaCompany_Dang extends Application {
         hbSize.getChildren().addAll(radSmall,radMedium,radLarge);
         vbSizeRoot.getChildren().addAll(lblSize,hbSize);
     }
+    
 }
