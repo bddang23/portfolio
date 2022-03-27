@@ -1,0 +1,13 @@
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\obj\Debug\KustomKarz_Binh.vbprojAssemblyReference.cache
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\obj\Debug\KustomKarz_Binh.frmOrder.resources
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\obj\Debug\KustomKarz_Binh.frmInvoice.resources
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\obj\Debug\KustomKarz_Binh.Resources.resources
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\obj\Debug\KustomKarz_Binh.vbproj.GenerateResource.cache
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\obj\Debug\KustomKarz_Binh.vbproj.CoreCompileInputs.cache
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\bin\Debug\KustomKarz_Binh.exe.config
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\bin\Debug\KustomKarz_Binh.exe
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\bin\Debug\KustomKarz_Binh.pdb
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\bin\Debug\KustomKarz_Binh.xml
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\obj\Debug\KustomKarz_Binh.exe
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\obj\Debug\KustomKarz_Binh.xml
+D:\WINTER 2022\CIS311\KustomKarz_Binh\KustomKarz_Binh\obj\Debug\KustomKarz_Binh.pdb
