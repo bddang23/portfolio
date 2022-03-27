@@ -1,0 +1,12 @@
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\bin\Debug\PayrollSystem_DANG.exe.config
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\bin\Debug\PayrollSystem_DANG.exe
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\bin\Debug\PayrollSystem_DANG.pdb
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\bin\Debug\PayrollSystem_DANG.xml
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\obj\Debug\PayrollSystem_DANG.vbprojAssemblyReference.cache
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\obj\Debug\PayrollSystem_DANG.Resources.resources
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\obj\Debug\PayrollSystem_DANG.vbproj.GenerateResource.cache
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\obj\Debug\PayrollSystem_DANG.vbproj.CoreCompileInputs.cache
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\obj\Debug\PayrollSystem_DANG.exe
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\obj\Debug\PayrollSystem_DANG.xml
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\obj\Debug\PayrollSystem_DANG.pdb
+D:\WINTER 2022\CIS311\PayrollSystem_DANG\PayrollSystem_DANG\obj\Debug\PayrollSystem_DANG.formPayroll.resources
