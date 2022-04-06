@@ -1,0 +1,7 @@
+D:\WINTER 2022\CIS311\SQLCarAndOwner\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.vbproj.AssemblyReference.cache
+D:\WINTER 2022\CIS311\SQLCarAndOwner\WinFormsApp1\obj\Debug\net5.0-windows\SQLCar.frmCar.resources
+D:\WINTER 2022\CIS311\SQLCarAndOwner\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.vbproj.GenerateResource.cache
+D:\WINTER 2022\CIS311\SQLCarAndOwner\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\WINTER 2022\CIS311\SQLCarAndOwner\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+D:\WINTER 2022\CIS311\SQLCarAndOwner\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.AssemblyInfo.vb
+D:\WINTER 2022\CIS311\SQLCarAndOwner\WinFormsApp1\obj\Debug\net5.0-windows\WinFormsApp1.vbproj.CoreCompileInputs.cache
