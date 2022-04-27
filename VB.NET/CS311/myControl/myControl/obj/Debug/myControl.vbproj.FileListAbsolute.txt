@@ -1,0 +1,14 @@
+D:\WINTER 2022\CIS311\myControl\myControl\bin\Debug\myControl.dll
+D:\WINTER 2022\CIS311\myControl\myControl\bin\Debug\myControl.pdb
+D:\WINTER 2022\CIS311\myControl\myControl\bin\Debug\myControl.xml
+D:\WINTER 2022\CIS311\myControl\myControl\obj\Debug\myControl.vbproj.AssemblyReference.cache
+D:\WINTER 2022\CIS311\myControl\myControl\obj\Debug\myControl.Resources.resources
+D:\WINTER 2022\CIS311\myControl\myControl\obj\Debug\myControl.vbproj.GenerateResource.cache
+D:\WINTER 2022\CIS311\myControl\myControl\obj\Debug\myControl.vbproj.CoreCompileInputs.cache
+D:\WINTER 2022\CIS311\myControl\myControl\obj\Debug\myControl.dll
+D:\WINTER 2022\CIS311\myControl\myControl\obj\Debug\myControl.xml
+D:\WINTER 2022\CIS311\myControl\myControl\obj\Debug\myControl.pdb
+D:\WINTER 2022\CIS311\myControl\myControl\bin\Debug\BinhClock.resx
+D:\WINTER 2022\CIS311\myControl\myControl\bin\Debug\BinhClock.vb
+D:\WINTER 2022\CIS311\myControl\myControl\bin\Debug\BinhClock.Designer.vb
+D:\WINTER 2022\CIS311\myControl\myControl\obj\Debug\myControl.BinhClock.resources
