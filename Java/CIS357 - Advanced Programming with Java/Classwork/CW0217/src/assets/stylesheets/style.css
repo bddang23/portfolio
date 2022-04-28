@@ -1,0 +1,14 @@
+.label{
+    -fx-font-size: 40px;
+    -fx-font-style: italic, bold;
+    -fx-text-fill: red;
+    -fx-font-family: "Courier New";
+}
+
+#btnOpen{
+    -fx-background-color: transparent;
+}
+
+#btnOpen:hover{
+    -fx-cursor:hand;
+}

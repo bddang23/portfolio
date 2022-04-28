@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;TCP_Socket_Programming/src&apos;&#x0D;&#x0A;- Original project: &apos;TCP_Socket_Programming&apos;&#x0D;&#x0A;- Destination element: &apos;TCP_Socket_Programming/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     client.java&#x0D;&#x0A;     server.java&#x0D;&#x0A;- Update references to refactored element" description="Move files" destination="/src" element1="client.java" element2="server.java" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1646234340992" units="0" version="1.0"/>
+</session>

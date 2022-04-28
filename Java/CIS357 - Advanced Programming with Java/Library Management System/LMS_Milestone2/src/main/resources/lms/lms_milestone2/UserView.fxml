@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane hgap="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="350.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.lms_milestone2.UserDetailController">
+   <columnConstraints>
+      <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="213.79998779296875" minWidth="10.0" prefWidth="116.8" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="292.1999923706054" minWidth="10.0" prefWidth="220.8" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="48.19998779296875" minHeight="10.0" prefHeight="37.40000610351562" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="80.59999389648439" minHeight="10.0" prefHeight="75.00000305175783" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.99998779296874" minHeight="0.0" prefHeight="37.600006103515625" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="60.79999389648438" minHeight="8.400006103515636" prefHeight="35.20001220703125" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="117.99996032714847" minHeight="0.9999816894531364" prefHeight="35.800006103515614" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="92.19999999999999" minHeight="2.8000396728515398" prefHeight="33.599993896484335" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="139.00003662109378" minHeight="10.0" prefHeight="42.39999999999998" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="139.00003662109378" minHeight="10.0" prefHeight="41.39998779296877" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="305.19996948242186" minHeight="10.0" prefHeight="200.00001220703126" vgrow="SOMETIMES" />
+      <RowConstraints fillHeight="false" maxHeight="250.39996948242185" minHeight="10.0" prefHeight="82.20003662109377" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <Label alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" text="Name" textFill="WHITE" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" text="Email" textFill="WHITE" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" text="Address" textFill="WHITE" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" text="User Type" textFill="WHITE" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" text="Date of Birth" textFill="WHITE" GridPane.rowIndex="6">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" prefHeight="22.0" prefWidth="351.0" style="-fx-background-color: orange;" text="                    User View" textAlignment="CENTER" GridPane.columnSpan="2147483647">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="159.0" spacing="10.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <children>
+            <Label text="Select User" textAlignment="CENTER" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="cmbUser" prefWidth="150.0" />
+         </children>
+      </VBox>
+      <Label fx:id="lblName" prefHeight="18.0" prefWidth="236.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lblEmail" prefHeight="18.0" prefWidth="236.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lblAddress" prefHeight="70.0" prefWidth="236.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="lblUserType" prefHeight="18.0" prefWidth="236.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDOB" prefHeight="18.0" prefWidth="236.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="219.0" prefWidth="351.0" spacing="10.0" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+         <children>
+            <Label text="Currently Checked Out Books" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold Italic" size="19.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lstBook" prefHeight="138.0" prefWidth="262.0" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </VBox>
+      <Label alignment="CENTER_RIGHT" nodeOrientation="RIGHT_TO_LEFT" text="Balance" textFill="WHITE" GridPane.rowIndex="7">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBalance" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="22.0" prefWidth="236.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnCollect" alignment="CENTER" mnemonicParsing="false" onAction="#CollectFine" prefHeight="41.0" prefWidth="183.0" text="Collect Fine" visible="false" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</GridPane>

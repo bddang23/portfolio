@@ -1,0 +1,176 @@
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HandleClient implements Runnable {
+	Socket socket;
+	String username = "";
+	boolean validUsername = false;
+	ArrayList<customer> Customers;
+	HashMap<String, String> userNpassword;
+	PrintWriter out;
+	BufferedReader in;
+
+	HandleClient(Socket socket) {
+		this.socket = socket;
+	}
+
+	public void run() {
+		try {
+			Customers = populateArray();
+			userNpassword = populateHashMap(Customers);
+
+			out = new PrintWriter(socket.getOutputStream(), true);
+			in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+
+			String optionInput = in.readLine();
+
+			switch (optionInput) {
+			case "1":
+				boolean validated = loginValidation();
+				if (validated) {
+					String option = in.readLine();
+					customer c = findCustomer(username);
+					while (!option.equals("E"))
+						switch (option) {
+						case "W":
+							double amt = Double.valueOf(in.readLine());
+							double result = c.withdraw(amt);
+							if (result == -1) {
+								out.println("Amount Exceed " + c.bal + "! Unable to Withdraw.");
+							} else {
+								out.println("Withdraw Successful ! Balance now is " + c.bal);
+							}
+						}
+					System.out.println("finish");
+					updateFile();
+					option = in.readLine();
+				}
+			case "2":
+
+			}
+		} catch (Exception e) {
+		}
+
+	}
+
+	private void updateFile() {
+		File file = new File("Users.txt");
+		file.delete();
+		try {
+			System.out.println("create new file");
+			file.createNewFile();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		try {
+			FileWriter myWriter = new FileWriter("Users.txt");
+			for (customer c : Customers) {
+				myWriter.write(c.username + " " + c.password + " " + c.fName + " " + c.lname + " " + c.bal);
+			}
+			myWriter.close();
+			System.out.println("finish writing file");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	private boolean loginValidation() throws IOException {
+		boolean validated = false;
+		int ctr = 0;
+		while (true) {
+			String input = in.readLine();
+			// first validate the username
+			if (input.contains("login_username"))
+				validUsername = validateUsername(input);
+			// if the user name is valid
+			if (validUsername) {
+				while (true) {
+					input = in.readLine();
+					if (input.equals("stop")) {
+						break;
+					} else {
+						validated = checkPassword(input);
+						if (validated)
+							return validated;
+						else
+							ctr++;
+					}
+				}
+				return validated;
+			}
+		}
+
+	}
+
+	private boolean checkPassword(String input) throws IOException {
+		// TODO Auto-generated method stub
+		String password = input;
+		if (!userNpassword.containsValue(password) & userNpassword.containsKey(username)) {
+			out.println(-1);
+			System.out.println("Login User " + username + " fail");
+			return false;
+		}
+
+		else {
+			out.println(1);
+			System.out.println("Login User " + username + " successfully");
+			return true;
+		}
+
+	}
+
+	private boolean validateUsername(String input) {
+		// TODO Auto-generated method stub
+		username = input.split(" ")[1];
+		if (!userNpassword.containsKey(username)) {
+			out.println(-1);
+			return false;
+		} else {
+			out.println(1);
+			return true;
+		}
+	}
+
+	private customer findCustomer(String username) {
+		for (customer c : Customers) {
+			if (c.username.equals(username)) {
+				return c;
+			}
+		}
+		return null;
+	}
+
+	private HashMap<String, String> populateHashMap(ArrayList<customer> customers) {
+		HashMap<String, String> accounts = new HashMap<String, String>();
+		;
+		for (customer c : customers) {
+			accounts.put(c.username, c.password);
+		}
+		return accounts;
+	}
+
+	private ArrayList<customer> populateArray() throws FileNotFoundException {
+		File data = new File("Users.txt");
+		Scanner s = new Scanner(data);
+		ArrayList<customer> customers = new ArrayList<>();
+		while (s.hasNextLine()) {
+			String info[] = s.nextLine().split(" ");
+			customers.add(new customer(info[0], info[1], info[2], info[3], info[4]));
+		}
+		return customers;
+	}
+}

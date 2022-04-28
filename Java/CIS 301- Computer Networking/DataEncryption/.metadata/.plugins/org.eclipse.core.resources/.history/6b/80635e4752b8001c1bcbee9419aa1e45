@@ -1,0 +1,19 @@
+
+public class customer {
+	String username;
+	String password;
+	String fName;
+	String lname;
+	double bal;
+
+	public customer(String username, String password, String fName, String lname, String bal) {
+		super();
+		this.username = username;
+		this.password = password;
+		this.fName = fName;
+		this.lname = lname;
+		this.bal = Double.parseDouble(bal);
+
+	}
+
+}

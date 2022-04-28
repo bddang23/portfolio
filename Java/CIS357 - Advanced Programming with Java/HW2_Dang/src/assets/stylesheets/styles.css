@@ -1,0 +1,36 @@
+/*set the base backround and size*/
+#base{
+    -fx-background-image: url("/assets/images/background.jpg");
+    -fx-background-size: 1200 800;
+}
+/*set all the labels of the program bigger*/
+.label{
+    -fx-font-size: 15px;
+}
+
+/*Add a small line for every hbox and vbox so the form looks nicer */
+#Crust, #Size, #Sauce,#Cheese,#Topping,#Seasoning{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #ffff99;
+}
+
+/*make all the text in the buttons, check box, ang toggle 15*/
+.radio-button, .check-box,.toggle-button{
+    -fx-font-size: 15;
+}
+/*make the 2 main buttons bigger 18px*/
+.button {
+    -fx-font-size: 18;
+}
+
+/*set the reset button background red and white text*/
+#Reset{
+    -fx-background-color: red;
+    -fx-font-color: white;
+}
+
+/*make the title bolder and bigger*/
+#Title{
+    -fx-font-size: 30px;
+    -fx-font-weight: 100;
+}

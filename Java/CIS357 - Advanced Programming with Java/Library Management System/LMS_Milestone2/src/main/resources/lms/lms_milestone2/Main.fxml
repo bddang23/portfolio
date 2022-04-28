@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="369.0" prefWidth="600.0" spacing="30.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lms.lms_milestone2.MainController">
+   <children>
+      <Label style="-fx-background-color: orange;" text="Library Management System Menu">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="75.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                  <Button fx:id="btnAddUser" maxHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#openNewUser" prefHeight="47.0" prefWidth="170.0" style="-fx-background-color: LightSlateGrey;" text="Add New User" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnIssue" maxHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#issueBook" prefHeight="47.0" prefWidth="170.0" style="-fx-background-color: LightSlateGrey;" text="Issue Book" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnUserDetail" maxHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#userDetail" prefHeight="47.0" prefWidth="170.0" style="-fx-background-color: LightSlateGrey;" text="View User Details" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                  <Button fx:id="btnAddBook" maxHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#AddBook" prefHeight="47.0" prefWidth="170.0" style="-fx-background-color: LightSlateGrey;" text="Add New Book" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnReturnBook" maxHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#returnBook" prefHeight="47.0" prefWidth="170.0" style="-fx-background-color: LightSlateGrey;" text="Return Book" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnviewIBook" maxHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#viewIBook" prefHeight="47.0" prefWidth="170.0" style="-fx-background-color: LightSlateGrey;" text="View Issued Book" textFill="WHITE" VBox.vgrow="ALWAYS">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>

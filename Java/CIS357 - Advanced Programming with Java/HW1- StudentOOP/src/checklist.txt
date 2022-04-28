@@ -1,0 +1,17 @@
+Please answer the following (Yes/No)
+
+
+YES - Program structure/Documentation
+YES - Are all of your instance attributes in all classes private?  If not , explain why?
+NO  - Are you explicitly using super() in the child class constructors?
+YES - Is your code properly documented? (see requirements on Assignment page)
+
+Program Output
+YES - Does your program gracefully handle situations where the user enters an incorrect file name?
+YES - Does your program handle files that are empty?
+YES - Does your program handle files that have exactly one entry?
+YES - Does your outputv match mine in terms of numbers when run on the sample input?
+YES -Does your output formatting match mine  when run on the sample input? (Minor formatting differences are OK, but columns should be properly aligned)
+
+
+

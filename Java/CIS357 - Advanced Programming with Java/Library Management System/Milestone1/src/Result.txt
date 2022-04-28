@@ -1,0 +1,42 @@
+----------User List-------------
+ID: 0 name= John Stones
+ID: 1 name= Jack Bauer
+ID: 2 name= Harry Kane
+ID: 3 name= Tim Arnold
+----------Book List-------------
+ID= 0, name= Programming with Java
+ID= 1, name= Data Structures and Algorithms
+ID= 2, name= Harry Potter and The Chamber of Secrets
+ID= 3, name= Lord of the Rings - The Two Towers
+------issue book 0 to user 0 ------
+true
+------attempt to issue book 0 to user 1------
+false
+------issue bookid 2 and 3 more books to user 0------
+true
+true
+------ attempt to issue 1 more books to user 0------
+false
+------ view all transactions------
+Transaction{bookID=0, userID=0, issueDate=2022-03-23, status=true}
+Transaction{bookID=2, userID=0, issueDate=2022-03-23, status=true}
+Transaction{bookID=3, userID=0, issueDate=2022-03-23, status=true}
+------ Search for a book that contains the word 'and' ------
+[ID= 1, name= Data Structures and Algorithms, ID= 2, name= Harry Potter and The Chamber of Secrets]
+------ Get Id for data structure book------
+ID= 1, name= Data Structures and Algorithms
+------ Return book 0 from user 0------
+true
+------ view all transactions------
+Transaction{bookID=0, userID=0, issueDate=2022-03-23, status=false}
+Transaction{bookID=2, userID=0, issueDate=2022-03-23, status=true}
+Transaction{bookID=3, userID=0, issueDate=2022-03-23, status=true}
+------ Hacking the balance field for user id 0 to $50------
+ID: 0 name= John Stones
+------ attempt to issue book to user 0 with outstanding balance------
+false
+------ Collected user Fine for user 0------
+------ attempt to reissue book to user 0 with NO outstanding balance------
+true
+
+Process finished with exit code 0

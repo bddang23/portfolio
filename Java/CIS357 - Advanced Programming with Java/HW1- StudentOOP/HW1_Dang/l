@@ -1,0 +1,39 @@
+Student Grade Summary 
+--------------------- 
+PHYSICS CLASS 
+ 
+Student                                  Final Final      Letter    
+Name                                     Exam  Average    Grade     
+--------------------------------------------------------------------- 
+ Neville   Longbottom                     45    73.30      C          
+ Dean      Thomas                         79    76.20      C          
+ Cedric    Diggory                        99    93.95      A          
+
+ 
+HISTORY CLASS 
+ 
+Student                                  Final Final      Letter    
+Name                                     Exam  Average    Grade     
+--------------------------------------------------------------------- 
+ George    Weasley                        91    92.25      A          
+ Severus   Snape                          88    89.89      B          
+ Fred      Weasley                        88    89.89      B          
+
+ 
+MATH CLASS 
+ 
+Student                                  Final Final      Letter    
+Name                                     Exam  Average    Grade     
+--------------------------------------------------------------------- 
+ Hermione  Granger                        93    94.69      A          
+ Victor    Krum                           68    64.44      D          
+ Draco     Malfoy                         88    62.44      D          
+
+ 
+OVERALL GRADE DISTRIBUTION 
+ 
+A: 	3
+B: 	2
+C: 	2
+D: 	2
+F: 	0
