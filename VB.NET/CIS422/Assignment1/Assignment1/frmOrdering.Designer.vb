@@ -24,15 +24,16 @@ Partial Class frmOrdering
     Private Sub InitializeComponent()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.pnlReceipt = New System.Windows.Forms.Panel()
+        Me.lstReceipt = New System.Windows.Forms.ListBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtDiscount = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.btnCalc = New System.Windows.Forms.Button()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.radDeluxe = New System.Windows.Forms.RadioButton()
+        Me.radStandard = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.mtbPhone = New System.Windows.Forms.MaskedTextBox()
         Me.txtLast = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtMiddle = New System.Windows.Forms.TextBox()
@@ -42,16 +43,18 @@ Partial Class frmOrdering
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.lstReceipt = New System.Windows.Forms.ListBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.numAmount = New System.Windows.Forms.NumericUpDown()
         Me.pnlReceipt.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.numAmount, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Britannic Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(124, 10)
+        Me.Label9.Location = New System.Drawing.Point(130, 10)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(101, 30)
         Me.Label9.TabIndex = 15
@@ -62,31 +65,41 @@ Partial Class frmOrdering
         Me.pnlReceipt.Controls.Add(Me.lstReceipt)
         Me.pnlReceipt.Controls.Add(Me.Label8)
         Me.pnlReceipt.Controls.Add(Me.Label9)
-        Me.pnlReceipt.Location = New System.Drawing.Point(453, -1)
+        Me.pnlReceipt.Location = New System.Drawing.Point(437, -1)
         Me.pnlReceipt.Name = "pnlReceipt"
-        Me.pnlReceipt.Size = New System.Drawing.Size(339, 241)
+        Me.pnlReceipt.Size = New System.Drawing.Size(355, 274)
         Me.pnlReceipt.TabIndex = 30
+        Me.pnlReceipt.Visible = False
+        '
+        'lstReceipt
+        '
+        Me.lstReceipt.FormattingEnabled = True
+        Me.lstReceipt.ItemHeight = 15
+        Me.lstReceipt.Location = New System.Drawing.Point(14, 58)
+        Me.lstReceipt.Name = "lstReceipt"
+        Me.lstReceipt.Size = New System.Drawing.Size(328, 199)
+        Me.lstReceipt.TabIndex = 17
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(52, 40)
+        Me.Label8.Location = New System.Drawing.Point(74, 40)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(242, 15)
         Me.Label8.TabIndex = 16
         Me.Label8.Text = "-----------------------------------------------"
         '
-        'TextBox1
+        'txtDiscount
         '
-        Me.TextBox1.Location = New System.Drawing.Point(23, 188)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(132, 23)
-        Me.TextBox1.TabIndex = 29
+        Me.txtDiscount.Location = New System.Drawing.Point(23, 229)
+        Me.txtDiscount.Name = "txtDiscount"
+        Me.txtDiscount.Size = New System.Drawing.Size(132, 23)
+        Me.txtDiscount.TabIndex = 29
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(23, 170)
+        Me.Label7.Location = New System.Drawing.Point(23, 211)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(75, 15)
         Me.Label7.TabIndex = 28
@@ -95,7 +108,7 @@ Partial Class frmOrdering
         'btnReset
         '
         Me.btnReset.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.btnReset.Location = New System.Drawing.Point(249, 182)
+        Me.btnReset.Location = New System.Drawing.Point(249, 223)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(88, 33)
         Me.btnReset.TabIndex = 27
@@ -104,53 +117,54 @@ Partial Class frmOrdering
         '
         'btnCalc
         '
-        Me.btnCalc.Location = New System.Drawing.Point(343, 182)
+        Me.btnCalc.Location = New System.Drawing.Point(343, 223)
         Me.btnCalc.Name = "btnCalc"
         Me.btnCalc.Size = New System.Drawing.Size(88, 33)
         Me.btnCalc.TabIndex = 26
         Me.btnCalc.Text = "Calculate"
         Me.btnCalc.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'radDeluxe
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Location = New System.Drawing.Point(148, 22)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(107, 34)
-        Me.RadioButton2.TabIndex = 1
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Deluxe" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "($10.00/Person)"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.radDeluxe.AutoSize = True
+        Me.radDeluxe.Location = New System.Drawing.Point(148, 37)
+        Me.radDeluxe.Name = "radDeluxe"
+        Me.radDeluxe.Size = New System.Drawing.Size(107, 34)
+        Me.radDeluxe.TabIndex = 1
+        Me.radDeluxe.TabStop = True
+        Me.radDeluxe.Text = "Deluxe" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "($10.00/Person)"
+        Me.radDeluxe.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'radStandard
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Location = New System.Drawing.Point(16, 22)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(101, 34)
-        Me.RadioButton1.TabIndex = 0
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Standard" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "($8.50/Person)"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.radStandard.AutoSize = True
+        Me.radStandard.Checked = True
+        Me.radStandard.Location = New System.Drawing.Point(15, 37)
+        Me.radStandard.Name = "radStandard"
+        Me.radStandard.Size = New System.Drawing.Size(101, 34)
+        Me.radStandard.TabIndex = 0
+        Me.radStandard.TabStop = True
+        Me.radStandard.Text = "Standard" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "($8.50/Person)"
+        Me.radStandard.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.RadioButton2)
-        Me.GroupBox1.Controls.Add(Me.RadioButton1)
+        Me.GroupBox1.Controls.Add(Me.radDeluxe)
+        Me.GroupBox1.Controls.Add(Me.radStandard)
         Me.GroupBox1.Location = New System.Drawing.Point(161, 109)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(270, 67)
+        Me.GroupBox1.Size = New System.Drawing.Size(270, 104)
         Me.GroupBox1.TabIndex = 25
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Catering Service Meal"
         '
-        'MaskedTextBox1
+        'mtbPhone
         '
-        Me.MaskedTextBox1.Location = New System.Drawing.Point(23, 131)
-        Me.MaskedTextBox1.Mask = "(999) 000-0000"
-        Me.MaskedTextBox1.Name = "MaskedTextBox1"
-        Me.MaskedTextBox1.Size = New System.Drawing.Size(132, 23)
-        Me.MaskedTextBox1.TabIndex = 24
+        Me.mtbPhone.Location = New System.Drawing.Point(23, 124)
+        Me.mtbPhone.Mask = "(999) 000-0000"
+        Me.mtbPhone.Name = "mtbPhone"
+        Me.mtbPhone.Size = New System.Drawing.Size(132, 23)
+        Me.mtbPhone.TabIndex = 24
         '
         'txtLast
         '
@@ -187,7 +201,7 @@ Partial Class frmOrdering
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(23, 113)
+        Me.Label4.Location = New System.Drawing.Point(23, 106)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(88, 15)
         Me.Label4.TabIndex = 20
@@ -228,27 +242,36 @@ Partial Class frmOrdering
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Order Form"
         '
-        'lstReceipt
+        'Label10
         '
-        Me.lstReceipt.FormattingEnabled = True
-        Me.lstReceipt.ItemHeight = 15
-        Me.lstReceipt.Location = New System.Drawing.Point(20, 58)
-        Me.lstReceipt.Name = "lstReceipt"
-        Me.lstReceipt.Size = New System.Drawing.Size(306, 169)
-        Me.lstReceipt.TabIndex = 17
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(23, 156)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(51, 15)
+        Me.Label10.TabIndex = 31
+        Me.Label10.Text = "Amount"
+        '
+        'numAmount
+        '
+        Me.numAmount.Location = New System.Drawing.Point(23, 173)
+        Me.numAmount.Name = "numAmount"
+        Me.numAmount.Size = New System.Drawing.Size(132, 23)
+        Me.numAmount.TabIndex = 33
         '
         'frmOrdering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(791, 237)
+        Me.ClientSize = New System.Drawing.Size(791, 268)
+        Me.Controls.Add(Me.numAmount)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.pnlReceipt)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtDiscount)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnCalc)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.MaskedTextBox1)
+        Me.Controls.Add(Me.mtbPhone)
         Me.Controls.Add(Me.txtLast)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtMiddle)
@@ -264,6 +287,7 @@ Partial Class frmOrdering
         Me.pnlReceipt.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.numAmount, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -272,14 +296,14 @@ Partial Class frmOrdering
     Friend WithEvents Label9 As Label
     Friend WithEvents pnlReceipt As Panel
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtDiscount As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents btnReset As Button
     Friend WithEvents btnCalc As Button
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents radDeluxe As RadioButton
+    Friend WithEvents radStandard As RadioButton
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents mtbPhone As MaskedTextBox
     Friend WithEvents txtLast As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents txtMiddle As TextBox
@@ -290,4 +314,6 @@ Partial Class frmOrdering
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lstReceipt As ListBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents numAmount As NumericUpDown
 End Class
